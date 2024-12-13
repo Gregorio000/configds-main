@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <hostname>emulator-host</hostname>
+    <filesystem_archive>filesystem.tar</filesystem_archive>
+    <log_file>session.csv</log_file>
+</config>
