@@ -1,0 +1,19 @@
+// Game Configuration Example
+
+// Base player stats
+100 -> BASE_HEALTH
+10 -> BASE_DAMAGE
+5 -> BASE_ARMOR
+
+// Computed stats
+$(* BASE_DAMAGE 2) -> CRITICAL_DAMAGE
+$(+ BASE_ARMOR 3) -> ENHANCED_ARMOR
+
+// Available weapon types (damage values)
+{ 10. 15. 20. } -> WEAPON_DAMAGES
+
+// Enemy spawn points (x, y coordinates)
+{ { 0. 0. }. { 10. 10. }. { 20. 20. } } -> SPAWN_POINTS
+
+// Level progression thresholds
+{ 100. $(* 100 2). $(* 100 4). $(* 100 8) } -> LEVEL_THRESHOLDS

@@ -1,0 +1,24 @@
+// Network Configuration Example
+
+// Base port numbers
+8080 -> HTTP_PORT
+8443 -> HTTPS_PORT
+27017 -> DB_PORT
+
+// Compute derived ports for additional services
+$(+ HTTP_PORT 1) -> ADMIN_PORT
+$(+ DB_PORT 1) -> DB_REPLICA_PORT
+
+// Retry intervals (in seconds)
+{ 1. 2. 4. 8. 16. } -> RETRY_INTERVALS
+
+// Server clusters (server IDs)
+{ 1. 2. 3. } -> PRIMARY_CLUSTER
+{ 4. 5. 6. } -> SECONDARY_CLUSTER
+
+// Maximum connections per server
+100 -> BASE_CONNECTIONS
+$(* BASE_CONNECTIONS 2) -> MAX_CONNECTIONS
+
+// Load balancer weights
+{ 10. 20. $(* 10 3) } -> LOAD_BALANCER_WEIGHTS
